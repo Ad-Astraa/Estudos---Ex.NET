@@ -34,14 +34,14 @@ namespace Rev
                             }
                             else
                             {
-                                throw new ArgumentException("Valor da nota deve ser menor ou igual a 10!\n\n\n\n");
+                                throw new ArgumentException("\n\n\nValor da nota deve ser menor ou igual a 10!\n\n\n\n");
                             }
 
                         }
                             
                         else
                         {
-                            throw new ArgumentException("Valor da nota deve ser decimal!\n\n\n\n");
+                            throw new ArgumentException("\n\n\nValor da nota deve ser decimal!\n\n\n\n");
                         }
                         alunos[indiceAluno] = aluno;
                         indiceAluno++;
