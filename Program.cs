@@ -7,6 +7,7 @@ namespace Rev
         static void Main(string[] args)
         {
             Aluno[] alunos = new Aluno[5];
+            var indiceAluno = 0;
             string opcaoUsuario = ObterOpcaoUsuario();
 
             while (opcaoUsuario.ToUpper() != "X")
@@ -26,16 +27,37 @@ namespace Rev
                         if(decimal.TryParse(Console.ReadLine(), out decimal nota))
                         {
                             aluno.Nota = nota;
-                        }else
+                        }
+                        else
                         {
                             throw new ArgumentException("Valor da nota deve ser decimal!");
                         }
+                        alunos[indiceAluno] = aluno;
+                        indiceAluno++;
                         //TODO: Adicionar Aluno
                         break;
                     case "2":
-                        //TODO: Listar Alunos
+                        foreach(var a in alunos)
+                        {
+                            if(!string.IsNullOrEmpty(a.Nome))
+                            {
+                                Console.WriteLine($"Aluno: {a.Nome}\nNota: {a.Nota}");
+                            }
+                        }
+                        // Listar Alunos
                         break;
                     case "3":
+                        var notaTotal = 0;
+                        var nrAlunos = 0;
+                        for(int i = 0; i < alunos.Length; i++)
+                        {
+                            if(!string.IsNullOrEmpty(alunos.Nome))
+                            {
+                                Console.WriteLine($"Aluno: {a.Nome}\nNota: {a.Nota}");
+                            }
+
+                        }
+
                         //TODO: Calcular Media Geral
                         break;
                     default:
@@ -47,7 +69,7 @@ namespace Rev
         }
         private static string ObterOpcaoUsuario()
         {
-            Console.WriteLine("Informe a opção desejada: \n1 - Inserir novo aluno\n2 - Listar alunos\n3 - Calcular média geral\nX - Sair\n............................................");
+            Console.WriteLine("\nInforme a opção desejada: \n1 - Inserir novo aluno\n2 - Listar alunos\n3 - Calcular média geral\nX - Sair\n............................................");
             string opcaoUsuario = Console.ReadLine();
             Console.WriteLine();
             return opcaoUsuario;
