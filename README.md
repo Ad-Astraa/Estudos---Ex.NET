@@ -8,7 +8,7 @@
 
 ​	◼O sistema possui um menu primitivo organizado que permite que o usuário escolha uma das opções disponíveis, assim como a finalização da aplicação:
 
-![image-20210606100515809](C:\Users\asus\Documents\Ex.NET\Rev\image-20210606100515809.png)
+![alt text](https://github.com/Ad-Astraa/Ex.NET/blob/master/image-20210606100515809.png)
 
 ​	◼O código segue a mesma linha de desenvolvimento do professor do curso, as alterações que eu fiz foram apenas na estrutura do menu e em uma tratativa de exceções que não foi abordada no curso, pois os alunos eram avaliados em conceitos que consideravam notas de **0,00** a **10,00**, mas o sistema aceitava qualquer valor *decimal*:
 
